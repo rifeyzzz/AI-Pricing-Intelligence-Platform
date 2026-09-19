@@ -1,17 +1,24 @@
 # AI Pricing Intelligence Platform
+ An end-to-end machine learning pricing decision system that forecasts SKU demand, estimates product-level price sensitivity, and recommends revenue-aware prices under governance constraints.
 
-An end-to-end machine-learning decision platform for demand forecasting, SKU-level price elasticity, revenue and profit optimization, portfolio prioritization, and governed pricing recommendations.
+Built on large-scale retail data, the platform turns historical demand and pricing signals into actionable pricing decisions across **659 retail products**.
+
+## Key Results
+
+- **R²: 0.68** on the demand forecasting holdout period
+- **MAE: 1.09** vs. **1.35** for the lag-1 baseline
+- **RMSE: 2.03** vs. **2.76** for the baseline
+- Product-level elasticity profiles for **659 SKUs**
+- Automated **AUTO_RECOMMEND / MANUAL_REVIEW** governance logic
+- End-to-end deployment through **FastAPI + Streamlit**
 
 ## Project Overview
 
-The platform transforms historical retail demand and pricing data into controlled commercial pricing decisions.
-
-It combines:
+The platform combines:
 
 - Demand forecasting
-- Product-level price elasticity
-- Revenue optimization
-- Profit optimization
+- SKU-level price elasticity estimation
+- Revenue-aware price optimization
 - Automated pricing recommendations
 - Commercial guardrails
 - Portfolio opportunity ranking
@@ -20,7 +27,8 @@ It combines:
 - FastAPI backend
 - Streamlit decision dashboard
 
-The current system models **659 retail products**.
+The elasticity estimates are observational decision-support signals rather than causal estimates, and suspicious or economically inconsistent results are routed to manual review.
+
 
 
 ## Platform Preview
