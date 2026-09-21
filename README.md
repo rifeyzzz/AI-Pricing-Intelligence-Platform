@@ -182,13 +182,38 @@ GET  /portfolio-opportunities
 GET  /model-info
 GET  /feature-importance
 ```
-
 Local Swagger documentation:
 
 ```text
 http://127.0.0.1:8001/docs
 ```
+### Example — Profit-Aware Pricing Recommendation
 
+Request:
+
+```json
+{
+  "item_id": "HOBBIES_1_295",
+  "unit_cost": 0.32,
+  "max_change_pct": 0.10
+}
+```
+
+Endpoint:
+
+```text
+POST /recommend-profit-auto
+```
+
+The endpoint returns a pricing recommendation combining demand, elasticity, revenue, profit and governance checks.
+
+The response also includes:
+
+- `decision_summary` — plain-English explanation of the recommendation
+- `governance_checks` — validation of pricing guardrails and decision rules
+- recommendation status such as `AUTO_RECOMMEND` or a review/validation outcome
+
+> **Cost data note:** `unit_cost` is supplied externally because product cost is not available in the M5 dataset.
 ## Dashboard
 
 The Streamlit application includes:
