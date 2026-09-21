@@ -1,27 +1,27 @@
 # Core data stack
-numpy
-pandas
-scipy
+numpy==2.3.5
+pandas==2.3.3
+scipy==1.16.3
 
 # Machine learning / econometrics
-scikit-learn
-statsmodels
-joblib
+scikit-learn==1.7.2
+statsmodels==0.14.5
+joblib==1.5.2
 
 # Backend API
-fastapi
-uvicorn[standard]
-pydantic
+fastapi==0.141.1
+uvicorn[standard]==0.52.4
+pydantic==2.12.4
 
 # Dashboard
-streamlit
-altair
-requests
+streamlit==1.51.0
+altair==5.5.0
+requests==2.32.5
 
 # Testing
-pytest
-httpx
+pytest==8.4.2
+httpx==0.28.1
 
 # Analysis / notebooks
-matplotlib
-jupyter
+matplotlib==3.10.6
+jupyter==1.1.1
