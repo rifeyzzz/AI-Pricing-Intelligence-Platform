@@ -110,6 +110,8 @@ For eligible products, the engine forecasts demand, retrieves elasticity, genera
 
 The platform supports both **revenue-maximizing** and **profit-maximizing** pricing.
 
+> **Cost data note:** The M5 dataset does not provide product unit costs. For profit optimization, `unit_cost` is therefore supplied as an external business input rather than predicted by the model. In a real deployment, this value would typically come from an ERP, finance system, or product master-data source. Revenue optimization can operate without unit-cost data.
+
 ## Governance
 
 Automatic recommendations require:
