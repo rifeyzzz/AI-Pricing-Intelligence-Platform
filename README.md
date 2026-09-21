@@ -99,6 +99,15 @@ Current features:
 Product-level price sensitivity is estimated using controlled Poisson regression models.
 
 Products are classified as **Elastic**, **Inelastic**, or **Investigate**.
+Across the 659 modeled products:
+
+- **405 Inelastic**
+- **19 Elastic**
+- **235 Investigate**
+
+This means **424 products are eligible for automated pricing recommendations**, while **235 products (~36%) are deliberately routed to human review** because their elasticity signal is not sufficiently reliable or economically consistent for automatic repricing.
+
+> **Governance principle:** The system does not force a pricing recommendation when the evidence is weak or suspicious. Uncertain products remain under human review rather than being repriced automatically.
 
 Products with suspicious or economically incoherent elasticity estimates are prevented from automatic repricing and routed to human review.
 
