@@ -150,6 +150,8 @@ The portfolio engine ranks high-value repricing opportunities using:
 
 Permutation feature importance is calculated using held-out forecasting observations.
 
+SHAP was also explored during model development; permutation importance was retained for the deployed explainability layer because it provides a model-agnostic measure aligned with the holdout evaluation workflow.
+
 The strongest predictive signals include rolling demand, lagged demand, calendar effects and price.
 
 > Predictive importance should not be interpreted as causal importance.
