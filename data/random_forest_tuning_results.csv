@@ -1,0 +1,2 @@
+Model,n_estimators,max_depth,min_samples_leaf,max_features,Validation_MAE,Final_Test_MAE,Final_Test_RMSE,Final_Test_R2,Training_Time_sec
+Random Forest,100,10,5,0.7,1.0489,1.092742010725091,2.0388246246528516,0.6787268015515462,38.2641684000846
