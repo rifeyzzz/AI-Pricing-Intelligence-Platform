@@ -70,6 +70,41 @@ This project turns forecasting and elasticity estimates into governed pricing re
 **MAE improvement versus baseline: ~19%**
 
 Evaluation uses a chronological 28-day holdout.
+## Model Benchmark & Hyperparameter Tuning
+
+To compare multiple model families under controlled compute, four forecasting models were trained on the same fixed **250,000-row historical training sample** and evaluated on the same untouched **28-day chronological holdout**.
+
+| Model | MAE | RMSE | R² | Training Time |
+|---|---:|---:|---:|---:|
+| Random Forest | **1.0962** | **2.0483** | **0.6757** | 56.9 s |
+| HistGradientBoosting | 1.1002 | 2.0555 | 0.6734 | 9.5 s |
+| XGBoost | 1.1029 | 2.0895 | 0.6626 | 18.4 s |
+| Linear Regression | 1.1334 | 2.1349 | 0.6477 | 0.4 s |
+| Lag-1 Baseline | 1.3477 | 2.7611 | 0.4108 | — |
+
+Random Forest achieved the lowest MAE in the controlled benchmark, while HistGradientBoosting delivered very similar predictive performance with substantially lower training time.
+
+### Hyperparameter Tuning
+
+Random Forest hyperparameters were tuned using a separate chronological validation window drawn exclusively from the historical training period. The final 28-day holdout was not used for parameter selection.
+
+Best configuration:
+
+- `n_estimators = 100`
+- `max_depth = 10`
+- `min_samples_leaf = 5`
+- `max_features = 0.7`
+
+The tuned Random Forest achieved:
+
+- **Internal validation MAE:** 1.0489
+- **Final holdout MAE:** 1.0927
+- **Final holdout RMSE:** 2.0388
+- **Final holdout R²:** 0.6787
+
+The deployed HistGradientBoosting model remains the project reference model because its full-training-set evaluation is highly competitive while offering substantially lower computational cost.
+
+> Benchmark results use a controlled 250,000-row training sample for fair cross-model comparison and should not be confused with the full-training-set metrics reported for the deployed forecasting model.
 
 ## Portfolio Coverage
 
