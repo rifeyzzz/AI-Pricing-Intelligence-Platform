@@ -2,7 +2,7 @@
     "model_name": "Demand Forecasting Engine",
     "model_type": "HistGradientBoostingRegressor",
     "version": "1.0.0",
-    "status": "Production Ready",
+    "status": "Validated Prototype",
     "evaluation": {
         "test_strategy": "Chronological 28-day holdout",
         "mae": 1.092,
