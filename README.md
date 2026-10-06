@@ -72,6 +72,9 @@ This project turns forecasting and elasticity estimates into governed pricing re
 Evaluation uses a chronological 28-day holdout.
 ## Model Benchmark & Hyperparameter Tuning
 
+> **Reproducibility:** the benchmark and Random Forest tuning workflow are available in [`02_model_comparison.ipynb`](02_model_comparison.ipynb).
+
+
 To compare multiple model families under controlled compute, four forecasting models were trained on the same fixed **250,000-row historical training sample** and evaluated on the same untouched **28-day chronological holdout**.
 
 | Model | MAE | RMSE | R² | Training Time |
