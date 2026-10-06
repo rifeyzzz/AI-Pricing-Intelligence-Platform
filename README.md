@@ -23,7 +23,7 @@ The platform combines:
 - Commercial guardrails
 - Portfolio opportunity ranking
 - Human-in-the-loop governance
-- Model monitoring and explainability
+- Model information and explainability
 - FastAPI backend
 - Streamlit decision dashboard
 
@@ -59,7 +59,7 @@ Pricing teams need to balance demand, revenue, profitability and customer price 
 
 This project turns forecasting and elasticity estimates into governed pricing recommendations that can be reviewed at product and portfolio level.
 
-## Key Results
+## Forecasting Performance
 
 | Metric | AI Model | Lag-1 Baseline |
 | --- | ---: | ---: |
